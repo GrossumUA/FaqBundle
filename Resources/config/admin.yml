@@ -1,0 +1,11 @@
+services:
+    grossum_faq.admin.faq:
+        class: %grossum_faq.faq.admin.class%
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: group.main, label: "FAQ" }
+        arguments:
+            - ~
+            - %grossum_faq.faq.entity.class%
+            - ~
+        calls:
+            - [ setFaqManager, [@grossum_faq.faq.manager]]

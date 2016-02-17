@@ -1,0 +1,5 @@
+services:
+    grossum_faq.faq.manager:
+        class: %grossum_faq.faq.manager.class%
+        arguments:
+            - @grossum_core.entity_manager

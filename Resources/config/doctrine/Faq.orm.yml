@@ -1,0 +1,21 @@
+Grossum\FaqBundle\Entity\Faq:
+    type: mappedSuperclass
+    repositoryClass: Grossum\FaqBundle\Entity\Repository\FaqRepository
+    fields:
+        enabled:
+            type: boolean
+        question:
+            type: text
+        answer:
+            type: text
+        position:
+            type: integer
+        createdAt:
+            type: datetime
+            column: created_at
+        updatedAt:
+            type: datetime
+            column: updated_at
+    lifecycleCallbacks:
+        prePersist: [setCreatedAtValue]
+        preUpdate:  [setUpdatedAtValue]
