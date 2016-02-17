@@ -3,8 +3,8 @@
     "description" : "This bundle added faq entity with fields: enabled, question, answer, position, createdAt and updatedAt",
     "type" : "symfony-bundle",
     "authors" : [{
-        "name" : "Dmytro Boiko",
-        "email" : "dboyko@grossum.com"
+        "name" : "Alexey Chernoivan",
+        "email" : "achernoivan@grossum.com"
     }],
     "keywords" : [
         "faq bundle"
@@ -16,12 +16,9 @@
         "php": ">=5.5.2",
         "symfony/framework-bundle": "~2.1",
         "sonata-project/core-bundle": "~2.2",
-        "sonata-project/cache": "~1.0",
-        "grossum/core-bundle": "~1"
-    },
-    "require-dev": {
+        "sonata-project/admin-bundle": "~2.2",
         "knplabs/knp-menu-bundle": "~2.0",
-        "sonata-project/admin-bundle": "~2.2"
+        "grossum/core-bundle": "~1"
     },
     "autoload" : {
         "psr-0" : {

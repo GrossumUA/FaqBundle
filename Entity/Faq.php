@@ -7,6 +7,8 @@ use Grossum\CoreBundle\Entity\EntityTrait\DateTimeControlTrait;
 
 class Faq
 {
+    const POSITION_DEFAULT = 1;
+
     use DateTimeControlTrait;
 
     /**
@@ -27,7 +29,7 @@ class Faq
     /**
      * @var integer
      */
-    private $position = 1;
+    private $position;
 
     /**
      * @var \DateTime
@@ -38,6 +40,11 @@ class Faq
      * @var \DateTime
      */
     private $updatedAt;
+
+    public function __construct()
+    {
+        $this->position = static::POSITION_DEFAULT;
+    }
 
     /**
      * @param boolean $enabled
@@ -165,16 +172,5 @@ class Faq
     public function __toString()
     {
         return $this->getQuestion() ?: "FAQ";
-    }
-
-    /**
-     * @return $this
-     */
-    public function setCreatedAtValue()
-    {
-        $this->createdAt = new \DateTime();
-        $this->updatedAt = clone $this->createdAt;
-
-        return $this;
     }
 }

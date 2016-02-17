@@ -14,11 +14,7 @@ class FaqRepository extends EntityRepository
     {
         return $this
             ->_em
-            ->createQuery('
-                SELECT faq
-                FROM GrossumFaqBundle:Faq AS faq
-                WHERE faq.enabled = true
-            ')
-            ->getResult();
+            ->getRepository('GrossumFaqBundle:Faq')
+            ->findBy(['enabled' => true]);
     }
 }

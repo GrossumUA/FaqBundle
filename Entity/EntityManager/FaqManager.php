@@ -5,16 +5,10 @@ namespace Grossum\FaqBundle\Entity\EntityManager;
 use Doctrine\Common\Persistence\ObjectManager;
 use Grossum\CoreBundle\Entity\EntityTrait\SaveUpdateInManagerTrait;
 use Grossum\FaqBundle\Entity\Repository\FaqRepository;
-use Grossum\FaqBundle\Entity\Faq;
 
 class FaqManager
 {
     use SaveUpdateInManagerTrait;
-
-    /**
-     * @var FaqRepository
-     */
-    private $repository;
 
     /**
      * @var ObjectManager
@@ -27,14 +21,13 @@ class FaqManager
     public function __construct(ObjectManager $objectManager)
     {
         $this->objectManager = $objectManager;
-        $this->repository    = $objectManager->getRepository('GrossumFaqBundle:Faq');
     }
 
     /**
-     * @return Faq[]
+     * @return FaqRepository
      */
-    public function findAllEnabled()
+    private function getRepository()
     {
-        return $this->repository->findAllEnabled();
+        return $this->objectManager->getRepository('GrossumFaqBundle:Faq');
     }
 }

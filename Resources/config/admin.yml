@@ -7,5 +7,3 @@ services:
             - ~
             - %grossum_faq.faq.entity.class%
             - ~
-        calls:
-            - [ setFaqManager, [@grossum_faq.faq.manager]]

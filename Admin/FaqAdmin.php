@@ -2,24 +2,17 @@
 
 namespace Grossum\FaqBundle\Admin;
 
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
-use Symfony\Component\Form\Extension\Core\Type as FormType;
-use Grossum\FaqBundle\Entity\EntityManager\FaqManager;
 
 class FaqAdmin extends Admin
 {
     /**
-     * @var FaqManager
-     */
-    private $faqManager;
-
-    /**
-     * Fields to be shown on create/edit forms
-     *
-     * @param FormMapper $formMapper
+     * {@inheritdoc}
      */
     protected function configureFormFields(FormMapper $formMapper)
     {
@@ -27,33 +20,24 @@ class FaqAdmin extends Admin
             ->add('enabled')
             ->add('question')
             ->add('answer')
-            ->add('position', FormType\IntegerType::class);
+            ->add('position', IntegerType::class);
     }
 
     /**
-     * @param DatagridMapper $datagridMapper
+     * {@inheritdoc}
      */
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        $datagridMapper
-            ->add('enabled');
+        $datagridMapper->add('enabled');
     }
 
     /**
-     * @param ListMapper $listMapper
+     * {@inheritdoc}
      */
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
             ->addIdentifier('question')
             ->add('position');
-    }
-
-    /**
-     * @param FaqManager $faqManager
-     */
-    public function setFaqManager(FaqManager $faqManager)
-    {
-        $this->faqManager = $faqManager;
     }
 }

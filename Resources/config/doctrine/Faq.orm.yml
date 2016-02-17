@@ -17,5 +17,5 @@ Grossum\FaqBundle\Entity\Faq:
             type: datetime
             column: updated_at
     lifecycleCallbacks:
-        prePersist: [setCreatedAtValue]
+        prePersist: [setCreatedAtValue, setUpdatedAtValue]
         preUpdate:  [setUpdatedAtValue]
