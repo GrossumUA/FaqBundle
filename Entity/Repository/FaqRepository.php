@@ -3,6 +3,7 @@
 namespace Grossum\FaqBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
+
 use Grossum\FaqBundle\Entity\Faq;
 
 class FaqRepository extends EntityRepository
