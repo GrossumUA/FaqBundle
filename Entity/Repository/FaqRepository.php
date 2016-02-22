@@ -13,9 +13,6 @@ class FaqRepository extends EntityRepository
      */
     public function findAllEnabled()
     {
-        return $this
-            ->_em
-            ->getRepository('GrossumFaqBundle:Faq')
-            ->findBy(['enabled' => true]);
+        return $this->findBy(['enabled' => true]);
     }
 }
