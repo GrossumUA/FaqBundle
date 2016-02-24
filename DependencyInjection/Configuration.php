@@ -13,7 +13,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode    = $treeBuilder->root('grossum_faq');
+        $rootNode = $treeBuilder->root('grossum_faq');
 
         return $treeBuilder;
     }

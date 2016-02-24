@@ -16,7 +16,7 @@ class GrossumFaqExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $configuration = new Configuration();
-        $config        = $this->processConfiguration($configuration, $configs);
+        $config = $this->processConfiguration($configuration, $configs);
 
         $registeredBundles = $container->getParameter('kernel.bundles');
 
@@ -24,7 +24,7 @@ class GrossumFaqExtension extends Extension
             throw new LogicException('GrossumFaqBundle required GrossumCoreBundle');
         }
 
-        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('admin.yml');
         $loader->load('classes.yml');
         $loader->load('services.yml');

@@ -33,7 +33,7 @@ class FaqManager
     public function __construct(ObjectManager $objectManager, $faqClass)
     {
         $this->objectManager = $objectManager;
-        $this->faqClass      = $faqClass;
+        $this->faqClass = $faqClass;
     }
 
     /**
