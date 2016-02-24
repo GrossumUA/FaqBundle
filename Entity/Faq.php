@@ -3,6 +3,7 @@
 namespace Grossum\FaqBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+
 use Grossum\CoreBundle\Entity\EntityTrait\DateTimeControlTrait;
 
 class Faq
@@ -14,32 +15,32 @@ class Faq
     /**
      * @var boolean
      */
-    private $enabled;
+    protected $enabled;
 
     /**
      * @var string
      */
-    private $question;
+    protected $question;
 
     /**
      * @var string
      */
-    private $answer;
+    protected $answer;
 
     /**
-     * @var integer
+     * @var int
      */
-    private $position;
-
-    /**
-     * @var \DateTime
-     */
-    private $createdAt;
+    protected $position;
 
     /**
      * @var \DateTime
      */
-    private $updatedAt;
+    protected $createdAt;
+
+    /**
+     * @var \DateTime
+     */
+    protected $updatedAt;
 
     public function __construct()
     {
@@ -107,7 +108,7 @@ class Faq
     }
 
     /**
-     * @param integer $position
+     * @param int $position
      *
      * @return $this
      */
@@ -119,7 +120,7 @@ class Faq
     }
 
     /**
-     * @return integer
+     * @return int
      */
     public function getPosition()
     {
@@ -171,6 +172,6 @@ class Faq
      */
     public function __toString()
     {
-        return $this->getQuestion() ?: "FAQ";
+        return $this->getQuestion() ?: 'FAQ';
     }
 }
