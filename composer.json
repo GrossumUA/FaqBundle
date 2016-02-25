@@ -20,14 +20,17 @@
         "knplabs/knp-menu-bundle": "~2.0",
         "grossum/core-bundle": "~1"
     },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "2.*",
+        "phpmd/phpmd" : "@stable",
+        "sebastian/phpcpd": "*"
+    },
     "autoload" : {
         "psr-0" : {
             "Grossum\\FaqBundle" : ""
         }
     },
     "target-dir" : "Grossum/FaqBundle",
-    "repositories" : [{
-    }],
     "extra" : {
     "branch-alias" : {
             "dev-master" : "0.1-dev"
