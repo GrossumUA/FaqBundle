@@ -18,7 +18,12 @@
         "sonata-project/core-bundle": "~2.2",
         "sonata-project/admin-bundle": "~2.2",
         "knplabs/knp-menu-bundle": "~2.0",
-        "grossum/core-bundle": "~1"
+        "grossum/core-bundle": "0.1.*@dev"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "2.*",
+        "phpmd/phpmd" : "@stable",
+        "sebastian/phpcpd": "*"
     },
     "autoload" : {
         "psr-0" : {
@@ -26,8 +31,6 @@
         }
     },
     "target-dir" : "Grossum/FaqBundle",
-    "repositories" : [{
-    }],
     "extra" : {
     "branch-alias" : {
             "dev-master" : "0.1-dev"
