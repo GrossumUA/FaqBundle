@@ -2,7 +2,7 @@ services:
     grossum_faq.admin.faq:
         class: %grossum_faq.faq.admin.class%
         tags:
-            - { name: sonata.admin, manager_type: orm, group: group.main, label: "FAQ" }
+            - { name: sonata.admin, manager_type: orm, group: group.main, label: "grossum_faq.admin.faq.plural_label" }
         arguments:
             - ~
             - %grossum_faq.faq.entity.class%

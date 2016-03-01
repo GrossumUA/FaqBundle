@@ -4,12 +4,12 @@ namespace Grossum\FaqBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
 
-use Grossum\FaqBundle\Entity\Faq;
+use Grossum\FaqBundle\Entity\BaseFaq;
 
-class FaqRepository extends EntityRepository
+class BaseFaqRepository extends EntityRepository
 {
     /**
-     * @return Faq[]
+     * @return BaseFaq[]
      */
     public function findAllEnabled()
     {

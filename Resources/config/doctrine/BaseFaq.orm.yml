@@ -1,6 +1,5 @@
-Grossum\FaqBundle\Entity\Faq:
+Grossum\FaqBundle\Entity\BaseFaq:
     type: mappedSuperclass
-    repositoryClass: Grossum\FaqBundle\Entity\Repository\FaqRepository
     fields:
         enabled:
             type: boolean
@@ -13,9 +12,12 @@ Grossum\FaqBundle\Entity\Faq:
         createdAt:
             type: datetime
             column: created_at
+            gedmo:
+                timestampable:
+                    on: create
         updatedAt:
             type: datetime
             column: updated_at
-    lifecycleCallbacks:
-        prePersist: [setCreatedAtValue, setUpdatedAtValue]
-        preUpdate:  [setUpdatedAtValue]
+            gedmo:
+                timestampable:
+                    on: update

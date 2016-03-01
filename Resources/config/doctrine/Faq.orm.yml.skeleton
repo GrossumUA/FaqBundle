@@ -1,0 +1,9 @@
+Application\Grossum\FaqBundle\Entity\Faq:
+    type:  entity
+    table: faq
+    repositoryClass: Application\Grossum\FaqBundle\Entity\Repository\FaqRepository
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO

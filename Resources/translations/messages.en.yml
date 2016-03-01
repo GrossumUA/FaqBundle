@@ -1,0 +1,9 @@
+grossum_faq:
+    admin:
+        faq:
+            label:        'FAQ'
+            plural_label: 'FAQs'
+            enabled:      'Enabled'
+            question:     'Question'
+            answer:       'Answer'
+            position:     'Position'

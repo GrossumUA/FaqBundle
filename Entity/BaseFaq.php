@@ -2,15 +2,9 @@
 
 namespace Grossum\FaqBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
-
-use Grossum\CoreBundle\Entity\EntityTrait\DateTimeControlTrait;
-
-class Faq
+class BaseFaq
 {
     const POSITION_DEFAULT = 1;
-
-    use DateTimeControlTrait;
 
     /**
      * @var boolean

@@ -11,6 +11,13 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 class GrossumFaqExtension extends Extension
 {
     /**
+     * @var array
+     */
+    protected $requiredBundles = [
+        'GrossumCoreBundle',
+    ];
+
+    /**
      * {@inheritdoc}
      */
     public function load(array $configs, ContainerBuilder $container)
@@ -20,9 +27,13 @@ class GrossumFaqExtension extends Extension
 
         $registeredBundles = $container->getParameter('kernel.bundles');
 
-        if (!isset($registeredBundles['GrossumCoreBundle'])) {
-            throw new LogicException('GrossumFaqBundle required GrossumCoreBundle');
+        foreach ($this->requiredBundles as $requiredBundle) {
+            if (!isset($registeredBundles[$requiredBundle])) {
+                throw new LogicException('GrossumFaqBundle required ' . $requiredBundle);
+            }
         }
+
+        $container->setParameter('grossum_faq.faq.entity.class', $config['class']['faq']);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('admin.yml');

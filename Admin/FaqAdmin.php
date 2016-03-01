@@ -2,8 +2,6 @@
 
 namespace Grossum\FaqBundle\Admin;
 
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-
 use Sonata\AdminBundle\Admin\Admin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -17,10 +15,34 @@ class FaqAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('enabled')
-            ->add('question')
-            ->add('answer')
-            ->add('position', IntegerType::class);
+            ->add(
+                'enabled',
+                null,
+                [
+                    'label' => 'grossum_faq.admin.faq.enabled',
+                ]
+            )
+            ->add(
+                'question',
+                null,
+                [
+                    'label' => 'grossum_faq.admin.faq.question',
+                ]
+            )
+            ->add(
+                'answer',
+                null,
+                [
+                    'label' => 'grossum_faq.admin.faq.answer',
+                ]
+            )
+            ->add(
+                'position',
+                null,
+                [
+                    'label' => 'grossum_faq.admin.faq.position',
+                ]
+            );
     }
 
     /**
@@ -28,7 +50,7 @@ class FaqAdmin extends Admin
      */
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
-        $datagridMapper->add('enabled');
+        $datagridMapper->add('enabled', null, ['label' => 'grossum_faq.admin.faq.enabled']);
     }
 
     /**
@@ -37,7 +59,19 @@ class FaqAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('question')
-            ->add('position');
+            ->addIdentifier(
+                'question',
+                null,
+                [
+                    'label' => 'grossum_faq.admin.faq.question',
+                ]
+            )
+            ->add(
+                'position',
+                null,
+                [
+                    'label' => 'grossum_faq.admin.faq.position',
+                ]
+            );
     }
 }
