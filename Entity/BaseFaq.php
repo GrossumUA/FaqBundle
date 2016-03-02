@@ -2,7 +2,7 @@
 
 namespace Grossum\FaqBundle\Entity;
 
-class BaseFaq
+abstract class BaseFaq
 {
     const POSITION_DEFAULT = 1;
 
