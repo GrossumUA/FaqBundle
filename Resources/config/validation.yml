@@ -1,0 +1,10 @@
+Grossum\FaqBundle\Entity\Faq:
+    properties:
+        question:
+            - NotBlank: ~
+        answer:
+            - NotBlank: ~
+        position:
+            - NotBlank: ~
+            - GreaterThanOrEqual:
+                value: 1

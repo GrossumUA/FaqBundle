@@ -1,0 +1,23 @@
+Grossum\FaqBundle\Entity\BaseFaq:
+    type: mappedSuperclass
+    fields:
+        enabled:
+            type: boolean
+        question:
+            type: text
+        answer:
+            type: text
+        position:
+            type: integer
+        createdAt:
+            type: datetime
+            column: created_at
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            column: updated_at
+            gedmo:
+                timestampable:
+                    on: update

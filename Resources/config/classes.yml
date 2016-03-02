@@ -1,0 +1,3 @@
+parameters:
+    grossum_faq.faq.admin.class:   Grossum\FaqBundle\Admin\FaqAdmin
+    grossum_faq.faq.manager.class: Grossum\FaqBundle\Entity\EntityManager\FaqManager
