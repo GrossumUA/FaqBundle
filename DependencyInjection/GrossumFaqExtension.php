@@ -29,7 +29,7 @@ class GrossumFaqExtension extends Extension
 
         foreach ($this->requiredBundles as $requiredBundle) {
             if (!isset($registeredBundles[$requiredBundle])) {
-                throw new LogicException('GrossumFaqBundle required ' . $requiredBundle);
+                throw new LogicException(sprintf('GrossumFaqBundle required %s', $requiredBundle));
             }
         }
 
