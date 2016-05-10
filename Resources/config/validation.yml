@@ -1,4 +1,4 @@
-Grossum\FaqBundle\Entity\Faq:
+Grossum\FaqBundle\Entity\BaseFaq:
     properties:
         question:
             - NotBlank: ~
