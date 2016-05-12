@@ -15,6 +15,7 @@ class GrossumFaqExtension extends Extension
      */
     protected $requiredBundles = [
         'GrossumCoreBundle',
+        'StofDoctrineExtensionsBundle',
     ];
 
     /**
