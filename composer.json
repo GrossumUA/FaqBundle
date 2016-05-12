@@ -18,7 +18,9 @@
         "sonata-project/core-bundle": "~2.2",
         "sonata-project/admin-bundle": "~2.2",
         "knplabs/knp-menu-bundle": "~2.0",
-        "grossum/core-bundle": "0.1.*@dev"
+        "grossum/core-bundle": "0.1.*@dev",
+        "gedmo/doctrine-extensions": "^2.4",
+        "stof/doctrine-extensions-bundle": "^1.2"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*",
