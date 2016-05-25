@@ -1,3 +1,8 @@
+FAQ Bundle
+==========
+
+[![Latest Stable Version](https://poser.pugx.org/grossum/faq-bundle/v/stable)](https://packagist.org/packages/grossum/faq-bundle) [![Total Downloads](https://poser.pugx.org/grossum/faq-bundle/downloads)](https://packagist.org/packages/grossum/faq-bundle) [![Latest Unstable Version](https://poser.pugx.org/grossum/faq-bundle/v/unstable)](https://packagist.org/packages/grossum/faq-bundle) [![License](https://poser.pugx.org/grossum/faq-bundle/license)](https://packagist.org/packages/grossum/faq-bundle)
+
 Installation
 ============
 
